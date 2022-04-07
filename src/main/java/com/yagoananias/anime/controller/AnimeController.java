@@ -28,7 +28,7 @@ public class AnimeController {
 	private AnimeService animeService;
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Anime> findById(@PathVariable Integer id) {
+	public ResponseEntity<Anime> get(@PathVariable Integer id) {
 		
 		Anime anime = this.animeService.findById(id);
 		return ResponseEntity.ok().body(anime);
@@ -36,20 +36,20 @@ public class AnimeController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Anime>> findAll() {
+	public ResponseEntity<List<Anime>> getAll() {
 		
 		List<Anime> listaAnimes = animeService.findAll();
 		return ResponseEntity.ok().body(listaAnimes);
 	}
 	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<Anime> update(@PathVariable Integer id, @RequestBody Anime anime) {
+	public ResponseEntity<Anime> put(@PathVariable Integer id, @RequestBody Anime anime) {
 		Anime novoAnime = animeService.update(id, anime);
 		return ResponseEntity.ok().body(novoAnime);
 	}
 	
 	@PostMapping
-	public ResponseEntity<Anime> create(@RequestBody Anime anime) {
+	public ResponseEntity<Anime> post(@RequestBody Anime anime) {
 		Anime novoAnime = animeService.create(anime);
 		URI uri = ServletUriComponentsBuilder
 				.fromCurrentRequest()
