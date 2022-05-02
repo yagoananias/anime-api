@@ -1,13 +1,14 @@
-package com.yagoananias.anime.services;
+package com.yagoananias.anime.adapter.dataprovider.service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.yagoananias.anime.adapter.dataprovider.repository.AnimeRepository;
+import com.yagoananias.anime.domain.models.Anime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yagoananias.anime.domain.Anime;
-import com.yagoananias.anime.repositories.AnimeRepository;
+
 
 @Service
 public class AnimeService {
@@ -25,10 +26,10 @@ public class AnimeService {
 	}
 
 	public Anime update(Integer id, Anime anime) {
-		Anime novoAnime = findById(id);
-		novoAnime.setName(anime.getName());
-		novoAnime.setNumberOfEpisodes(anime.getNumberOfEpisodes());
-		return animeRepository.save(novoAnime);
+		Anime newAnime = findById(id);
+		newAnime.setName(anime.getName());
+		newAnime.setNumberOfEpisodes(anime.getNumberOfEpisodes());
+		return animeRepository.save(newAnime);
 	}
 
 	public Anime create(Anime anime) {

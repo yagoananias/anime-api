@@ -1,8 +1,10 @@
-package com.yagoananias.anime.controller;
+package com.yagoananias.anime.adapter.dataprovider.entrypoint.controller;
 
 import java.net.URI;
 import java.util.List;
 
+import com.yagoananias.anime.adapter.dataprovider.service.AnimeService;
+import com.yagoananias.anime.domain.models.Anime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,8 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.yagoananias.anime.domain.Anime;
-import com.yagoananias.anime.services.AnimeService;
+
 
 import lombok.Delegate;
 

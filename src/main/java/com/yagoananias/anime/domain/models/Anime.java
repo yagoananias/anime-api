@@ -1,4 +1,4 @@
-package com.yagoananias.anime.domain;
+package com.yagoananias.anime.domain.models;
 
 import java.io.Serializable;
 

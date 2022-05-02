@@ -2,13 +2,13 @@ package com.yagoananias.anime;
 
 import java.util.Arrays;
 
+import com.yagoananias.anime.adapter.dataprovider.repository.AnimeRepository;
+import com.yagoananias.anime.domain.models.Anime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.yagoananias.anime.domain.Anime;
-import com.yagoananias.anime.repositories.AnimeRepository;
 
 @SpringBootApplication
 public class AnimeApplication implements CommandLineRunner{

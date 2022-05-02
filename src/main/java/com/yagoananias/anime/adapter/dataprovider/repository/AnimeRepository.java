@@ -1,8 +1,7 @@
-package com.yagoananias.anime.repositories;
+package com.yagoananias.anime.adapter.dataprovider.repository;
 
+import com.yagoananias.anime.domain.models.Anime;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.yagoananias.anime.domain.Anime;
 
 public interface AnimeRepository extends JpaRepository<Anime, Integer> {
 
